@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { FOUR, FOUR_HUNDRED } from './constants';
 
 function App() {
   return (
@@ -9,7 +10,11 @@ function App() {
 }
 
 export function ValidateLeapYear(year) {
-  return (year % 4 === 0) ? true : false;
+  return (year % FOUR === 0) ? true : false;
+}
+
+export function IsYearDivisibleBy400(year) {
+  return (year % FOUR_HUNDRED === 0) ? true : false;
 }
 
 export default App;
