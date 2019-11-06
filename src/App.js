@@ -8,4 +8,8 @@ function App() {
   );
 }
 
+export function ValidateLeapYear(year) {
+  return (year % 4 === 0) ? true : false;
+}
+
 export default App;
