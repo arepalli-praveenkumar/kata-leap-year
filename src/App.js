@@ -20,4 +20,13 @@ export function IsYearDivisibleBy400(year) {
 export function IsYearDivisibleBy100(year) {
   return (year % HUNDRED === 0) ? true : false;
 }
+
+export function IsValidLeapYear(year) {
+   if (IsYearDivisibleBy100(year)) {
+     return IsYearDivisibleBy400(year);
+   } else {
+    return IsYearDivisibleBy4(year);
+   }
+}
+
 export default App;
